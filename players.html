@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Order_Items</title>
+        <link rel="stylesheet" href="softwareEngStyles.css" type="text/css">
+        <style>
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            table, th, td {
+              border: 1px solid black;
+            }
+            th {
+              text-align: center;
+              height: 20px;
+            }
+            #table {
+                padding-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+    <section id="navBar">
+      <nav class="horizontalBar">
+        <ul>
+            <li class="dbPage"><a href="/">Home</a></li>
+            <li class="dbPage"><a href="/players">Players</a></li>
+            <li class="dbPage"><a href="/teams">Teams</a></li>
+            <li class="dbPage"><a href="/league">League</a></li>
+        </ul>
+      </nav>    
+    </section>
+        <form id="add_player" action="/players" method="post"> 
+            <fieldset>
+                <legend>Add Players</legend>
+                <label for="players"></label>
+                <label>Name
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>Appearances:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>Goals:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>Position:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <input type="submit" id="order_items_submit" name="submit_button" value="Add Player">
+            </fieldset>
+        </form>
+        <form id="search_player" action="/players" method="post"> 
+            <fieldset>
+                <legend>Search Player</legend>
+                <label for="players"></label>
+                <label>Name
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>Appearances:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>Goals:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>Position:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <input type="submit" id="order_items_submit" name="submit_button" value="Search Player">
+            </fieldset>
+        </form>
+        <form id="delete_player" action="/players" method="post"> 
+            <fieldset>
+                <legend>Delete Players</legend>
+                <label for="players"></label>
+                <label>Name
+                    <input type="text" name="name"></input>
+                </label>
+                <input type="submit" id="delete_player_submit" name="submit_button" value="Delete Player">
+                <br />
+            </fieldset>
+        </form>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <form action="/players" method="post"> 
+            <fieldset>
+                <legend>Spell Check:</legend>
+                <input type="text" id="spellcheck" value="">
+                <input type="button" value="Submit" onclick="sendRequest()">
+            </fieldset>
+        </form>

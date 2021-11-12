@@ -1,0 +1,29 @@
+nav.horizontalBar {
+	background-color: #05386B;
+	width: 100%;
+	display: inline-block;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li.dbPage {
+	float: left;
+	border-right: 1px solid #EDF5E1;
+
+}
+
+
+li a {
+	display: block;
+    color: #EDF5E1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+	background-color: #195E96;
+}
