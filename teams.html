@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Order_Items</title>
+        <link rel="stylesheet" href="softwareEngStyles.css" type="text/css">
+        <style>
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            table, th, td {
+              border: 1px solid black;
+            }
+            th {
+              text-align: center;
+              height: 20px;
+            }
+            #table {
+                padding-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+    <section id="navBar">
+      <nav class="horizontalBar">
+        <ul>
+            <li class="dbPage"><a href="/">Home</a></li>
+            <li class="dbPage"><a href="/players">Players</a></li>
+            <li class="dbPage"><a href="/teams">Teams</a></li>
+            <li class="dbPage"><a href="/league">League</a></li>
+        </ul>
+      </nav>    
+    </section>
+        <form id="add_player" action="/players" method="post"> 
+            <fieldset>
+                <legend>Add Leagues</legend>
+                <label for="leagued"></label>
+                <label>Name
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>year:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>Finish Position:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>Player of the Year:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>Young Player of the Year:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <input type="submit" id="add_team_submit" name="submit_button" value="Add team">
+            </fieldset>
+        </form>
+        <form id="search_team" action="/teams" method="post"> 
+            <fieldset>
+                <legend>Search Team</legend>
+                <label for="teams"></label>
+                <label>Name
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <label>year:
+                    <input type="text" name="name"></input>
+                </label>
+                <br />
+                <input type="submit" id="search_team_submit" name="submit_button" value="Search Team">
+            </fieldset>
+        </form>
+        <form id="delete_team" action="/teams" method="post"> 
+            <fieldset>
+                <legend>Delete Teams</legend>
+                <label for="teams"></label>
+                <label>Name
+                    <input type="text" name="name"></input>
+                </label>
+                <input type="submit" id="delete_team_submit" name="submit_button" value="Delete team">
+                <br />
+            </fieldset>
+        </form>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <form action="/teams" method="post"> 
+            <fieldset>
+                <legend>Spell Check:</legend>
+                <input type="text" id="spellcheck" value="">
+                <input type="button" value="Submit" onclick="sendRequest()">
+            </fieldset>
+        </form>
